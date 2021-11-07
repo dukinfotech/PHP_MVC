@@ -51,5 +51,5 @@
             }
         }
     } catch (Exception $e) {
-        new Core\Exception($e->getCode(), $e->getMessage());
+        new Core\Exception($e->getMessage(), $e->getCode());
     }

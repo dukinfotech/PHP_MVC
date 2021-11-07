@@ -8,6 +8,6 @@
         public function index() {
             $post = new Post();
             $posts = $post->all();
-            self::renderView('posts/index', ['posts' => $posts]);
+            view('posts/index', ['posts' => $posts]);
         }
     }

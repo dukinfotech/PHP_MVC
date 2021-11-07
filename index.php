@@ -1,8 +1,9 @@
 <?php
-    require_once './app/helper.php';
     require_once './core/Exception.php';
+    require_once './core/helper.php';
 
     // Require config
+    require_once './app/helper.php';
     require_once './app/config.php';
 
     

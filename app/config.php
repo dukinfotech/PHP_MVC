@@ -4,3 +4,4 @@
     const DB_NAME = 'tubep';
     const DB_USER = 'root';
     const DB_PASSWORD = '';
+    const DEBUG = true;

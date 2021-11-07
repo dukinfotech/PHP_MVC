@@ -12,8 +12,8 @@
             $routeController = $definedRoute['controller'];
             if ($requestMethod === $definedRoute['method']) {
                 $methodNotFound = false;
+                break;
             }
-            break;
         }
     }
 

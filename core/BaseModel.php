@@ -25,4 +25,48 @@
             $rows = $command->fetchAll();
             return $rows;
         }
+        
+        public function store($data = []) {
+            $sql = 'INSERT INTO '.$this->table.' (';
+            foreach ($data as $key => $value) {
+                $sql .= $key . ', ';
+            }
+            $sql = trim($sql, ', ');
+            $sql .= ') VALUES (';
+            foreach ($data as $key => $value) {
+                $sql .= ':' . $key . ', ';
+            }
+            $sql = trim($sql, ', ');
+            $sql .= ');';
+            
+            $data2 = [];
+            foreach ($data as $key => $value) {
+                $data2[':'.$key] = $value;
+            }
+            
+            $command = $this->conn->prepare($sql);
+            return $command->execute($data2);
+        }
+
+        public function findOne($data = [])
+        {
+            $sql = 'SELECT * FROM '.$this->table.' WHERE ';
+
+            foreach ($data as $key => $value) {
+                $sql .= $key . '=:' . $key . ' AND ';
+            }
+            $sql = trim($sql, ' AND');
+            $sql .= ' LIMIT 1';
+
+            $data2 = [];
+            foreach ($data as $key => $value) {
+                $data2[':'.$key] = $value;
+            }
+            
+            $command = $this->conn->prepare($sql);
+            $command->execute($data2);
+
+            $row = $command->fetch();
+            return $row;
+        }
     }

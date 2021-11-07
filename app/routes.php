@@ -1,5 +1,5 @@
 <?php
     $definedRoutes = [
-        ['uri' => '/posts', 'controller' => 'PostController@index'],
-        ['uri' => '/', 'controller' => 'PageController@home'],
+        ['uri' => '/posts', 'controller' => 'PostController@index', 'method' => 'GET'],
+        ['uri' => '/', 'controller' => 'PageController@home', 'method' => 'GET'],
     ];

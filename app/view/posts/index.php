@@ -18,6 +18,7 @@
       <td>#</td>
       <td>Title</td>
       <td>Content</td>
+      <td>Image</td>
       <td>Action</td>
     </thead>
     <tbody>
@@ -26,6 +27,11 @@
         <td><?php echo $post['id'] ?></td>
         <td><?php echo $post['title'] ?></td>
         <td><?php echo $post['content'] ?></td>
+        <td>
+          <?php if (isset($post['image'])) { ?>
+            <img src="<?php echo $post['image'] ?>" alt="img" height="50">
+          <?php } ?>
+        </td>
         <td>
           <form action="">
             <button class="btn btn-warning">Edit</button>

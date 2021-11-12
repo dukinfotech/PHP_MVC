@@ -8,4 +8,6 @@
         ['uri' => '/login', 'controller' => 'UserController@showLogin', 'method' => 'GET'],
         ['uri' => '/login', 'controller' => 'UserController@login', 'method' => 'POST'],
         ['uri' => '/logout', 'controller' => 'UserController@logout', 'method' => 'GET'],
+
+        ['uri' => '/admin', 'controller' => 'PageController@dashboard', 'method' => 'GET'],
     ];

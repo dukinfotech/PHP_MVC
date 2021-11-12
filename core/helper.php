@@ -45,7 +45,6 @@ function view($viewPath, $data = [], $core = false, $layout = null) {
         $html = str_replace('@body', $viewCode, $layoutCode);
         die($html);
         
-
     } else {
         new Exception('View ' . $viewFile . ' Not Found', 404);
     }

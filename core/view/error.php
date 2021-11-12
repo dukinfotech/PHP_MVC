@@ -1,50 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo DEBUG ? $errorCode : 'System is under maintenance' ?></title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <style>
-    .page_404 {
-      padding:40px 0; background:#fff; font-family: 'Arvo', serif;
-    }
+<style>
+  .page_404 {
+    padding:40px 0; background:#fff; font-family: 'Arvo', serif;
+  }
 
-    .page_404 img {
-      width:100%;
-    }
+  .page_404 img {
+    width:100%;
+  }
 
-    .four_zero_four_bg {
-      background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
-      background-repeat: no-repeat;
-      height: 400px;
-      background-position: center;
-    }
-    
-    .four_zero_four_bg h1 {
-      font-size:80px;
-    }
-    
-    .four_zero_four_bg h3 {
-      font-size:80px;
-    }
-          
-    .link_404 {			 
-      color: #fff!important;
-      padding: 10px 20px;
-      background: #39ac31;
-      margin: 20px 0;
-      display: inline-block;
-    }
+  .four_zero_four_bg {
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    background-repeat: no-repeat;
+    height: 400px;
+    background-position: center;
+  }
+  
+  .four_zero_four_bg h1 {
+    font-size:80px;
+  }
+  
+  .four_zero_four_bg h3 {
+    font-size:80px;
+  }
+        
+  .link_404 {			 
+    color: #fff!important;
+    padding: 10px 20px;
+    background: #39ac31;
+    margin: 20px 0;
+    display: inline-block;
+  }
 
-    .contant_box_404 {
-      margin-top:-50px;
-    }
-  </style>
-</head>
-<body>
-  <section class="page_404">
+  .contant_box_404 {
+    margin-top:-50px;
+  }
+</style>
+<section class="page_404">
     <div class="container">
       <div class="row">	
         <div class="col-sm-12 ">
@@ -66,5 +56,3 @@
       </div>
     </div>
   </section>
-</body>
-</html>

@@ -6,7 +6,11 @@
     class UserController extends BaseController
     {
         public function showRegister() {
-            view('auth/register');
+            if (isset($_SESSION['user'])) {
+                header("Location: /");
+            } else {
+                view('auth/register');
+            }
         }
 
         public function register() {
@@ -26,24 +30,40 @@
         }
 
         public function showLogin() {
-            view('auth/login');
+            if (isset($_SESSION['user'])) {
+                header("Location: /");
+            } else {
+                view('auth/login');
+            }
         }
 
         public function login() {
-            $isLogin = false;
-            $email = $postData['email'];
-            $password = $postData['password'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
 
             $user = new User();
             $fetchUser = $user->findOne(['email' => $email]);
-            
-            if ($fetchUser) {
-                if (password_verify($password, $fetchUser['password'])) {
-                    $isLogin = true;
-                    $_SESSION['isLogin'] = true;
-                }
-            }
 
-            return $isLogin;
+            try {
+                if (! $fetchUser) {
+                    throw new \Exception();   
+                }
+                if (! password_verify($password, $fetchUser['password'])) {
+                    throw new \Exception();
+                }
+                unset($fetchUser['password']);
+                $_SESSION['user'] = $fetchUser;
+                header("Location: /");
+            } catch (\Exception $e) {
+                $_SESSION['error_once'] = 'Email or password is incorrect!';
+                header("Location: /login");
+            }
+        }
+
+        public function logout() {
+            if (isset($_SESSION['user'])) {
+                unset($_SESSION['user']);
+            }
+            header("Location: /login");
         }
     }

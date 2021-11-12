@@ -47,7 +47,8 @@
                     if (class_exists($controllerClass)) {
                         $instance = new $controllerClass();
                         if (method_exists($instance, $methodName)) {
-                            $instance->{$methodName}();                     
+                            $instance->{$methodName}();
+                            exit();              
                         } else {
                             throw new Exception('Method ' . $methodName . ' Not Found', 404);
                         }

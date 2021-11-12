@@ -10,6 +10,7 @@
 </head>
 <body class="d-flex justify-content-center" style="background: url('/public/img/bg_auth.jpg') no-repeat center center;background-size: cover">
   <form id="registerForm" method="POST" action="/register">
+    <h3 class="text-center"><a href="/">Home</a></h3>
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" name="name" class="form-control" placeholder="Enter name" required>

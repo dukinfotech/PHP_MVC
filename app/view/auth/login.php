@@ -16,6 +16,7 @@
   <?php } ?>
   <div class="d-flex justify-content-center">
     <form id="loginForm" method="POST" action="/login">
+      <h3 class="text-center"><a href="/">Home</a></h3>
       <div class="form-group">
         <label>Email address</label>
         <input type="email" class="form-control" name="email" placeholder="Enter email" id="loginEmail" required>
@@ -24,6 +25,7 @@
         <label>Password</label>
         <input type="password" class="form-control" name="password" placeholder="Password" id="loginPassword" required>
       </div>
+      <div class="text-danger"><?php if (isset($_SESSION['error_once'])) { echo $_SESSION['error_once']; } ?></div>
       <div class="d-flex justify-content-between">
         <button type="submit" class="btn btn-primary">Login</button>
         <a href="/register">Register</a>

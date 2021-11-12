@@ -15,10 +15,13 @@ function view($viewPath, $data = [], $core = false) {
         include $viewFile;
 
         $output = ob_get_clean();
+        if (isset($_SESSION['error_once'])) {
+            unset($_SESSION['error_once']);
+        }
         die($output);
+        
 
     } else {
-        $x = new Exception('View ' . $viewFile . ' Not Found', 404);
-        var_dump($x);
+        new Exception('View ' . $viewFile . ' Not Found', 404);
     }
 }

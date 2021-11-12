@@ -8,11 +8,11 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="./public/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/public/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="./public/css/adminlte.min.css">
+  <link rel="stylesheet" href="/public/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -41,10 +41,10 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="/admin/posts" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Widgets
+                Posts
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
@@ -86,10 +86,10 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="./public/plugins/jquery/jquery.min.js"></script>
+<script src="/public/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="./public/plugins/jquery-ui/jquery-ui.min.js"></script>
-<script src="./public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="./public/js/adminlte.min.js"></script>
+<script src="/public/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/public/js/adminlte.min.js"></script>
 </body>
 </html>

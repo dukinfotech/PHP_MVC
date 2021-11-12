@@ -10,4 +10,7 @@
         ['uri' => '/logout', 'controller' => 'UserController@logout', 'method' => 'GET'],
 
         ['uri' => '/admin', 'controller' => 'PageController@dashboard', 'method' => 'GET'],
+        ['uri' => '/admin/posts/create', 'controller' => 'PostController@create', 'method' => 'GET'],
+        ['uri' => '/admin/posts/create', 'controller' => 'PostController@store', 'method' => 'POST'],
+        ['uri' => '/admin/posts', 'controller' => 'PostController@index', 'method' => 'GET'],
     ];
